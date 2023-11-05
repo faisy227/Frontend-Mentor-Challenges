@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Alex+Brush&family=Allura&family=Amatic+SC&family=Antic+Didone&family=Bodoni+Moda:opsz@6..96&family=Bubbler+One&family=Caveat&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Dancing+Script&family=Great+Vibes&family=Indie+Flower&family=Macondo&family=Montserrat:wght@100;200&family=Nunito:wght@200&family=Oswald:wght@200&family=Playfair+Display:ital@1&family=Roboto:ital,wght@0,100;0,400;1,100&family=Sacramento&family=Space+Mono&family=Spectral:wght@200&family=Tangerine&family=Tulpen+One&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | QR code component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html{
+      font-size: 10px;
+    }
+    body{
+     background-color: rgba(224, 255, 255, 0.788);
+      
+    }
+    section{
+      position: absolute;
+      top: 50%;
+      left:50%;
+      transform: translate(-50%, -50%);
+      height: 43rem;
+      width: 25rem;
+      border-radius: 2rem;
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(255, 255, 255);
+      justify-content: space-around;
+      align-items: center;
+    }
+    figure{
+      height: 22rem;
+      width: 22rem;
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+    figure img{
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+    p{
+      font-size: 1.4rem;
+      text-align: center;
+      font-family: 'Bodoni Moda', serif;
+    }
+    .improve{
+     color: black;
+     font-weight: bold;
+    }
+    .scan{
+      color: rgb(177, 175, 175);
+    }
+
+  </style>
+</head>
+<body>
+    <section>
+      <figure>
+        <img src="image-qr-code.png" alt="QR">
+      </figure>
+    <p class="improve">Improve your front-end skills by building projects</p>
+  
+    <p class="scan">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+    </section>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Zion-Faisy</a>.
+  </div>
+</body>
+</html>
