@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Alex+Brush&family=Allura&family=Amatic+SC&family=Antic+Didone&family=Bodoni+Moda:opsz@6..96&family=Bubbler+One&family=Caveat&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Dancing+Script&family=Great+Vibes&family=Indie+Flower&family=Macondo&family=Montserrat:wght@100;200&family=Nunito:wght@200&family=Oswald:wght@200&family=Playfair+Display:ital@1&family=Roboto:ital,wght@0,100;0,400;1,100&family=Sacramento&family=Space+Mono&family=Spectral:wght@200&family=Tangerine&family=Tulpen+One&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-image: url(pattern-background-desktop.svg);
+      background-color:#e2eaff;
+}
+main{
+  height:100vh ;
+  display: grid;
+  place-items: center;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 10px;
+}
+h1{
+  font-size: 2.2rem;
+  font-family: 'Bodoni Moda', serif;
+}
+p{
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 0 1rem;
+  font-family: 'Bodoni Moda', serif;
+}
+section{
+  height: 52rem;
+  width: 35rem;
+  background-color: white;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+figure{
+  height: 20rem;
+  width: 35rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  overflow: hidden;
+margin-top: -2rem;
+}
+figure img{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+article{
+  height: 6rem;
+  width: 80%;
+  background-color:  hsl(225, 100%, 98%);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+a{
+  font-size: 1rem;
+  font-family: 'Bodoni Moda', serif;
+  color:  blueviolet;;
+  font-weight: bold;
+  transition: all 1000ms linear;
+}
+a:hover{
+  text-decoration: none;
+}
+.button{
+  background-color: hsl(245, 75%, 52%);
+  color: white;
+  height: 4rem;
+  width: 80%;
+  border-radius: 1.0rem;
+  border: none;
+  font-size: 1.6rem;
+  font-family: 'Bodoni Moda', serif;
+  box-shadow: 0px 10px 5px 0px  hsla(245, 75%, 52%, 0.288);
+  transition: all 1000ms ease-in-out;
+}
+.button:hover{
+  background-color: blueviolet;
+  box-shadow: 0px 10px 5px 0px  rgba(137, 43, 226, 0.288);
+}
+.cancel-button{
+  color: gray;
+  border: none;
+  background-color: transparent;
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.6rem;
+  transition: all 1000ms ease-in-out;
+}
+.cancel-button:hover{
+  color: black;
+}
+
+
+
+  </style>
+</head>
+<body>
+<main>
+  <section>
+    <figure>
+    <img src="illustration-hero.svg" alt="Flat illustration">
+    </figure>
+    <h1>Order Summary</h1>
+    <p>You can now listen to millions of songs, audiobooks, and podcasts on any 
+      device anywhere you like!</p>
+  
+  <article>
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#DFE6FB"/><path fill="#717FA6" fill-rule="nonzero" d="M32.574 15.198a.81.81 0 00-.646-.19L20.581 16.63a.81.81 0 00-.696.803V26.934a3.232 3.232 0 00-1.632-.44A3.257 3.257 0 0015 29.747 3.257 3.257 0 0018.253 33a3.257 3.257 0 003.253-3.253v-8.37l9.726-1.39v5.327a3.232 3.232 0 00-1.631-.441 3.257 3.257 0 00-3.254 3.253 3.257 3.257 0 003.254 3.253 3.257 3.257 0 003.253-3.253V15.81a.81.81 0 00-.28-.613z"/></g></svg>
+    <div>
+      <p>Annual Plan</p>
+    <p>$59.99/year</p>
+    </div>
+     <a href="#">Change</a>
+  </article>
+  
+   <button class="button"> Proceed to Payment</button>
+   <button class="cancel-button">Cancel Order</button>
+  </section>
+</main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
