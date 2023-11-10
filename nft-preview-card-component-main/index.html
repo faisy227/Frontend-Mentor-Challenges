@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Alex+Brush&family=Allura&family=Amatic+SC&family=Antic+Didone&family=Bodoni+Moda:opsz@6..96&family=Bubbler+One&family=Caveat&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Dancing+Script&family=Great+Vibes&family=Indie+Flower&family=Macondo&family=Montserrat:wght@100;200&family=Nunito:wght@200&family=Oswald:wght@200&family=Playfair+Display:ital@1&family=Roboto:ital,wght@0,100;0,400;1,100&family=Sacramento&family=Space+Mono&family=Spectral:wght@200&family=Tangerine&family=Tulpen+One&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html{
+      font-size: 10px;
+    }
+    body{
+      background-color: hsl(217, 54%, 11%);
+    }
+    main{
+      height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+    .display{
+      position: relative;
+      height: 23rem;
+      width: 26rem;
+      overflow: hidden;
+    }
+   .display svg{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      opacity: 0;
+      transition: all 1000ms linear;
+
+    }
+    .display:hover svg{
+      opacity: 1;
+    }
+    .display img{
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      transition: all 1000ms linear;
+    }
+    .display:hover img{
+    opacity: 0.5;
+    }
+    .overlay{
+      height: 100%;
+      width: 100%;
+      position: absolute;
+     top: 0;
+     left: 0;
+     opacity: 0;
+     overflow: hidden;
+     background-color: aqua;
+     transition: all 1000ms linear;
+    }
+    .display:hover .overlay{
+      opacity: 0.5;
+    }
+    .info{
+      height: 50rem;
+      width: 30rem;
+      background-color: hsl(216, 50%, 16%);
+      border-radius: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    h1{
+      color: white;
+      font-size: 2rem;
+      font-family: 'Bodoni Moda', serif;
+      align-self: start;
+      margin: 0 2rem;
+    }
+    h1:hover{
+      color: aqua;
+    }
+    p{
+      text-align: left;
+      color: gray;
+      font-size: 1.5rem;
+      margin: 0 2rem;
+      font-family: 'Bodoni Moda', serif;
+    }
+    article{
+      display: flex;
+    }
+   
+    .avatar{
+      height: 2.5rem;
+      width: 2.5rem;
+      overflow: hidden;
+    }
+    .avatar img{
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+   hr{
+      width: 22rem;
+      border: none; 
+      border-bottom: 0.5px solid gray; 
+      opacity: 0.6;
+    }
+    p span{
+      color: white;
+      font-weight: bold;
+    }
+    p span:hover{
+      color: aqua;
+    }
+    #aqua{
+      color: aqua;
+      font-weight: bold;
+    }
+    footer{
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -100%);
+    }
+  
+
+
+  </style>
+</head>
+<body>
+
+  <main>
+   <section class="info">
+    <figure class="display">
+      <img src="image-equilibrium.jpg" alt="Ombre Cube">
+      <svg width="48" height="48" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h48v48H0z"/><path d="M24 9C14 9 5.46 15.22 2 24c3.46 8.78 12 15 22 15 10.01 0 18.54-6.22 22-15-3.46-8.78-11.99-15-22-15Zm0 25c-5.52 0-10-4.48-10-10s4.48-10 10-10 10 4.48 10 10-4.48 10-10 10Zm0-16c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6Z" fill="#FFF" fill-rule="nonzero"/></g></svg>
+      <figcaption class="overlay"></figcaption>
+    </figure>
+    <h1> Equilibrium #3429</h1>
+    <p>Our Equilibrium collection promotes balance and calm.</p>
+  
+    <article class="stats">
+    <article  class="p-icon">
+      <svg width="11" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 10.216 5.5 18 0 10.216l5.5 3.263 5.5-3.262ZM5.5 0l5.496 9.169L5.5 12.43 0 9.17 5.5 0Z" fill="#00FFF8"/></svg>
+     <p id="aqua"> 0.041 ETH</p>
+      </article>
+    <article class="p-icon">
+      <svg width="17" height="17" xmlns="http://www.w3.org/2000/svg"><path d="M8.305 2.007a6.667 6.667 0 1 0 0 13.334 6.667 6.667 0 0 0 0-13.334Zm2.667 7.334H8.305a.667.667 0 0 1-.667-.667V6.007a.667.667 0 0 1 1.334 0v2h2a.667.667 0 0 1 0 1.334Z" fill="#8BACD9"/></svg>
+      <p>3 days left</p>
+    </article>
+    </article>
+
+    <hr>
+ <article>
+  <figure class="avatar">
+    <img src="image-avatar.png" alt="Profile Picture">
+  </figure>
+  <p>Creation of <span>Jules Wyvern</span></p>
+ </article>
+   </section>
+  </main>
+ <footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Zion-Faisy Akakpo</a>.
+  </div>
+ </footer>
+</body>
+</html>
