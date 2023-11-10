@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Alex+Brush&family=Allura&family=Amatic+SC&family=Antic+Didone&family=Bodoni+Moda:opsz@6..96&family=Bubbler+One&family=Caveat&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Dancing+Script&family=Great+Vibes&family=Indie+Flower&family=Macondo&family=Montserrat:wght@100;200&family=Nunito:wght@200&family=Oswald:wght@200&family=Playfair+Display:ital@1&family=Roboto:ital,wght@0,100;0,400;1,100&family=Sacramento&family=Space+Mono&family=Spectral:wght@200&family=Tangerine&family=Tulpen+One&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html{
+      font-size: 10px;
+    }
+    main{
+      height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+    h2{
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      color: white;
+      margin: 0 5rem;
+    }
+    section{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    article{
+      height: 48rem;
+      width: 30rem;
+      display: flex;
+      flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    }
+    .sedan{
+      background-color: orange;
+    }
+    .sedan .button{
+      color: orange;
+    }
+    .suv{
+      background-color: darkcyan;
+    }
+    .suv .button{
+     color: darkcyan;
+    }
+    .luxury{
+      background-color: green;
+    }
+    .luxury .button{
+      color: green;
+    }
+    figure{
+      margin: 3rem 5rem;
+    }
+    p{
+      font-family: 'Bodoni Moda', serif;
+      font-size: 1.6rem;
+      text-align: left;
+      margin: 0 5rem;
+      color: white;
+    }
+    .button{
+      font-family: 'Bodoni Moda', serif;
+      border-radius: 2rem;
+      height: 3.8rem;
+      width: 11rem;
+      border: none;
+      background-color: white;
+      position: absolute;
+      top: 80%;
+      left: 15%;
+      transition: all 1000ms linear;
+    }
+    .button:hover{
+      font-family: 'Bodoni Moda', serif;
+      border: 0.2rem solid white;
+      color: white;
+      background-color: transparent;
+    }
+
+
+
+  </style>
+</head>
+<body>
+  
+ <main>
+  <section>
+    <article class="sedan">
+      <figure>
+        <img src="icon-sedans.svg" alt="sedan">
+      </figure>
+      <h2>SEDANS</h2>
+      <p>Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
+        or on your next road trip.</p>
+        <button class="button">Learn More</button>
+     </article>
+    
+      <article class="suv">
+        <figure>
+          <img src="icon-suvs.svg" alt="suv">
+        </figure>
+        <h2>SUVS</h2>
+      <p>Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
+        and off-road adventures.
+      </p>
+      <button class="button">Learn More</button>
+      </article>
+    
+    <article class="luxury">
+      <figure>
+        <img src="icon-luxury.svg" alt="luxury">
+      </figure>
+      <h2>LUXURY</h2>
+      <p>Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
+        rental and arrive in style.</p>
+        <button class="button">Learn More</button>
+    </article>
+      
+  </section>
+ </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Zion-Faisy Akakpo</a>.
+  </div>
+</body>
+</html>
