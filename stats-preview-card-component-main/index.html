@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Alex+Brush&family=Allura&family=Amatic+SC&family=Antic+Didone&family=Bodoni+Moda:opsz@6..96&family=Bubbler+One&family=Caveat&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Dancing+Script&family=Great+Vibes&family=Indie+Flower&family=Macondo&family=Montserrat:wght@100;200&family=Nunito:wght@200&family=Oswald:wght@200&family=Playfair+Display:ital@1&family=Roboto:ital,wght@0,100;0,400;1,100&family=Sacramento&family=Space+Mono&family=Spectral:wght@200&family=Tangerine&family=Tulpen+One&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Bodoni Moda', serif;
+    }
+    html{
+      font-size: 10px;
+    }
+    body{
+      background-color: hsl(233, 47%, 7%);
+    }
+    main{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    section{
+      height: 45rem;
+      width: 55rem;
+      background-color: hsl(244, 38%, 16%) ;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    h1{
+      text-align: left;
+      font-size: 4rem;
+      color: white;
+      margin: 0 4rem;
+    }
+    h1 span{
+      color:hsl(277, 64%, 61%);
+    }
+    p{
+      font-size: 2rem;
+      color: gray;
+      margin: 0 4rem;
+    }
+    p span{
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: white;
+    }
+    article{
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      
+    }
+    figure{
+      height: 45rem;
+      width: 55rem;
+      overflow: hidden;
+      position: relative;
+    }
+    figure img{
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+    .overlay{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: hsl(277, 93%, 16%);
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+ <main>
+<section>
+  <h1> Get <span>insights</span> that help your business grow.</h1>
+ <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+    experience, and overall efficiency.</p>
+ <article>
+  <p><span>10k+</span> <br> COMPANIES</p>
+<p><span>314</span> <br> TEMPLATES</p>
+ <p><span>12m+</span><br> QUERIES</p>
+ </article>
+</section>
+<figure>
+  <img src="image-header-desktop.jpg" alt="People at a table">
+  <figcaption class="overlay"></figcaption>
+</figure>
+ </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Zion-Faisy Akakpo</a>.
+  </div>
+</body>
+</html>
