@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Alex+Brush&family=Allura&family=Amatic+SC&family=Antic+Didone&family=Bodoni+Moda:opsz@6..96&family=Bubbler+One&family=Caveat&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Dancing+Script&family=Great+Vibes&family=Indie+Flower&family=Macondo&family=Montserrat:wght@100;200&family=Nunito:wght@200&family=Oswald:wght@200&family=Playfair+Display:ital@1&family=Roboto:ital,wght@0,100;0,400;1,100&family=Sacramento&family=Space+Mono&family=Spectral:wght@200&family=Tangerine&family=Tulpen+One&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Four card feature section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html{
+      font-size: 10px;
+    }
+    main{
+      height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+    header{
+      text-align: center;
+    }
+    h1{
+      font-size: 3rem;
+      font-family: 'Nunito', sans-serif;
+    }
+    h1 span{
+      font-weight: 100;
+    }
+    h2{
+      font-family: 'Nunito', sans-serif;
+      font-size: 2rem;
+    }
+    p{
+      color: gray;
+      font-size: 1.5rem;
+      font-family: 'Nunito', sans-serif;
+    }
+    .card{
+      height: 20rem;
+      width: 32rem;
+      text-align: center;
+      position: relative;
+      border-radius: .5rem;
+      padding: 3rem;
+      box-shadow: -10px 10px 20px 0px rgba(145, 143, 143, 0.5);
+      border: none;
+    }
+    .cards{
+      height: 60rem;
+      width: 100%;
+      display: flex;
+      gap: 3rem;
+      justify-content: center;
+      margin: 3rem 0;
+      position: relative;
+    }
+    .column{
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+    }
+    .green{
+      border-top: 0.3rem solid hsl(180, 62%, 55%);
+     position: relative;
+     top: 20%;
+    }
+    .red{
+      border-top: 0.3rem solid hsl(0, 78%, 62%);
+
+    }
+    .yellow{
+      border-top: 0.3rem solid hsl(34, 97%, 64%);
+    }
+    .blue{
+      border-top: 0.3rem solid hsl(212, 86%, 64%);
+      position: relative;
+     top: 20%;
+
+    }
+    .card p{
+      text-align: left;
+    }
+    figure{
+      position: absolute;
+      bottom: 10%;
+      left: 90%;
+      transform: translate(-90%, -20%);
+    }
+  </style>
+</head>
+<body>
+  
+ <main>
+
+    <header>
+      <h1><span>Reliable, efficient delivery</span> <br/>
+        Powered by Technology</h1>
+     <p> Our Artificial Intelligence powered tools use millions of project data <br/>points 
+      to ensure that your project is successful</p>
+     </header>
+    
+    <section class="cards">
+
+      <article class="card green">
+        <h2>Supervisor</h2>
+        <p>Monitors activity to identify project roadblocks</p>
+       <figure>
+        <img src="icon-supervisor.svg" alt="Supervisor">
+       </figure>
+       </article>
+      
+       <section class="column">
+        <article class="card red">
+          <h2>Team Builder</h2>
+          <p> Scans our talent network to create the optimal team for your project</p>
+          <figure>
+            <img src="icon-team-builder.svg" alt="Team Builder">
+          </figure>
+         </article>
+        
+         <article class="card yellow">
+          <h2>Karma</h2>
+          <p>Regularly evaluates our talent to ensure quality</p>
+          <figure>
+            <img src="icon-karma.svg" alt="Karma">
+          </figure>
+         </article>
+       </section>
+
+       <article class="card blue">
+        <h2>Calculator</h2>
+        <p> Uses data from past projects to provide better delivery estimates</p> 
+        <figure>
+          <img src="icon-calculator.svg" alt="Calculator">
+        </figure>
+       </article>
+    </section>
+ </main>
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer>
+</body>
+</html>
