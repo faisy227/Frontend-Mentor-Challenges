@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Alex+Brush&family=Allura&family=Amatic+SC&family=Antic+Didone&family=Bodoni+Moda:opsz@6..96&family=Bubbler+One&family=Caveat&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Dancing+Script&family=Great+Vibes&family=Indie+Flower&family=Macondo&family=Montserrat:wght@100;200&family=Nunito:wght@200&family=Oswald:wght@200&family=Playfair+Display:ital@1&family=Roboto:ital,wght@0,100;0,400;1,100&family=Sacramento&family=Space+Mono&family=Spectral:wght@200&family=Tangerine&family=Tulpen+One&display=swap" rel="stylesheet">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Social proof section</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html{
+        font-size: 10px;
+      }
+      main{
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: hsl(300, 24%, 96%);
+      }
+      h1{
+        font-size: 4rem;
+        color:  hsl(300, 43%, 22%);
+        text-align: left;
+      }
+      p{
+        font-size: 1.5rem;
+        font-family: 'Bodoni Moda', serif;
+
+      }
+      .top-title p{
+        text-align: left;
+      }
+      .top-title{
+        height: 20rem;
+        width: 40rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        font-family: 'Bodoni Moda', serif;
+        grid-area: title;
+      }
+      figcaption p{
+        color:  hsl(300, 43%, 22%);
+        font-weight: bold;
+        margin: 0 4rem;
+        text-align: left;
+      }
+      .ratings-container figure{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 5rem;
+      width: 40rem;
+      gap: 1rem;
+      border-radius: 1rem;
+      background-color:  hsl(300, 24%, 96%);
+      margin: 2rem 0;
+    }
+    .ratings-container figure:nth-child(1){
+      position: relative;
+      left: -20rem;
+    }
+    .ratings-container figure:nth-child(2){
+      position: relative;
+      left: -15rem;
+    }
+    .ratings-container figure:nth-child(3){
+      position: relative;
+      left: -10rem;
+    }
+    .card{
+    height: 22rem;
+    width: 35rem;
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 0.5rem;
+    color:  hsl(300, 24%, 96%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    }
+    .card article{
+      display: flex;
+      margin: 0 5rem;
+    }
+
+    #name{
+      font-weight: bold;
+    }
+    .card span{
+      color: hsl(333, 80%, 67%);
+    }
+    .card figure{
+      height: 5rem;
+      width: 5rem;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .card figure img{
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+    .card p{
+      margin: 0 4rem;
+    }
+    .reviews{
+      display: flex;
+      gap: 3rem;
+    }
+    .reviews .card:nth-child(2){
+      position: relative;
+      top: 2rem;
+    }
+    .reviews .card:nth-child(3){
+      position: relative;
+      top: 4rem;
+    }
+    .content{
+      padding: 8rem;
+      background-color: white;
+    }
+    .top{
+      display: flex;
+      justify-content: space-between;
+    }
+    #svg{
+      height: 30rem;
+    }
+
+    </style>
+  </head>
+  <body>
+  <main>
+    <section class="content">
+    <!-- <img src="bg-pattern-top-desktop.svg" alt="top" id="svg"> -->
+
+     <section class="top">
+      <article class="top-title">
+        <h1>10,000+ of our users love our products.</h1>
+        <p> We only provide great products combined with excellent customer service.
+         See what our satisfied customers are saying about our services.</p>  
+       </article>
+    
+      <article class="ratings-container">
+        <figure>
+         <article>
+          <img src="icon-star.svg" alt="rating stars">
+          <img src="icon-star.svg" alt="rating stars">
+          <img src="icon-star.svg" alt="rating stars">
+          <img src="icon-star.svg" alt="rating stars">
+          <img src="icon-star.svg" alt="rating stars">
+         </article>
+          <figcaption> <p class="ratings">Rated 5 Stars in Reviews</p></figcaption>
+        </figure>
+
+        <figure>
+          <article>
+            <img src="icon-star.svg" alt="rating stars">
+            <img src="icon-star.svg" alt="rating stars">
+            <img src="icon-star.svg" alt="rating stars">
+            <img src="icon-star.svg" alt="rating stars">
+            <img src="icon-star.svg" alt="rating stars">
+           </article>
+          <figcaption><p class="ratings">Rated 5 Stars in Report Guru</p></figcaption>
+        </figure>
+
+        <figure>
+          <article>
+            <img src="icon-star.svg" alt="rating stars">
+            <img src="icon-star.svg" alt="rating stars">
+            <img src="icon-star.svg" alt="rating stars">
+            <img src="icon-star.svg" alt="rating stars">
+            <img src="icon-star.svg" alt="rating stars">
+           </article>
+          <figcaption>  <p class="ratings"> Rated 5 Stars in BestTech</p></figcaption>
+        </figure>
+       
+      </article>
+     </section>
+        
+      <section class="reviews">
+
+        <article class="card">
+          <article>
+            <figure>
+              <img src="image-colton.jpg" alt="Colton">
+            </figure>
+            <p id="name">Colton Smith <br/>
+              <span>Verified Buyer</span></p>
+          </article>
+         <p>"We needed the same printed design as the one we had ordered a week prior.
+          Not only did they find the original order, but we also received it in time.
+          Excellent!"</p>
+         </article>
+          
+          <article class="card">
+          <article>
+           <figure>
+            <img src="image-irene.jpg" alt="Irene">
+           </figure>
+            <p id="name">Irene Roberts <br/>
+              <span>Verified Buyer</span></p>
+          </article>
+            <p>"Customer service is always excellent and very quick turn around. Completely
+              delighted with the simplicity of the purchase and the speed of delivery."</p>
+          </article>
+          
+         <article class="card">
+          <article>
+            <figure>
+              <img src="image-anne.jpg" alt="Anne">
+            </figure>
+            <p id="name">Anne Wallace <br>
+            <span>Verified Buyer</span></p>
+        </article>
+           <p> "Put an order with this company and can only praise them for the very high
+            standard. Will definitely use them again and recommend them to everyone!"  </p>
+         </article>
+    <!-- <img src="bg-pattern-bottom-desktop.svg" alt="bottom" id="svg"> -->
+
+      </section>
+    </section>
+   
+  </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Zion-Faisy Akakpo</a>.
+    </div>
+  </body>
+</html>
