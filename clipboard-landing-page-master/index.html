@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Alex+Brush&family=Allura&family=Amatic+SC&family=Antic+Didone&family=Bodoni+Moda:opsz@6..96&family=Bubbler+One&family=Caveat&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Dancing+Script&family=Great+Vibes&family=Indie+Flower&family=Macondo&family=Montserrat:wght@100;200&family=Nunito:wght@200&family=Oswald:wght@200&family=Playfair+Display:ital@1&family=Roboto:ital,wght@0,100;0,400;1,100&family=Sacramento&family=Space+Mono&family=Spectral:wght@200&family=Tangerine&family=Tulpen+One&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Clipboard landing page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html{
+      font-size: 10px;
+    }
+    header{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 2rem;
+      margin: 12rem 0;
+    }
+    h1{
+      font-family: 'Nunito', sans-serif;
+      font-size: 4rem;
+      color:   hsl(210, 10%, 33%);
+    }
+    p{
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.8rem;
+      color: hsl(201, 11%, 66%);
+    }
+    .button{
+      margin: 2rem 1rem;
+      height: 5.5rem;
+      width: 20rem;
+      border-radius: 2.5rem;
+      border: none;
+      color: white;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.8rem;
+      box-shadow: 0rem 1rem 2rem 0rem hsl(0, 1%, 62%);
+      cursor: pointer;
+    }
+    #green{
+      background-color:  hsl(171, 66%, 44%);
+    }
+    #green:hover{
+      background-color:  hsl(171, 66%, 50%);
+    }
+    #purple{
+      background-color: hsl(233, 100%, 69%);
+    }
+    #purple:hover{
+      background-color: hsl(233, 100%, 75%);
+    }
+    h2{
+      font-family: 'Nunito', sans-serif;
+      font-size: 3.5rem;
+      margin: 3rem 0;
+      color:   hsl(210, 10%, 33%);
+    }
+    .keep-track{
+      text-align: center;
+      margin: 7rem 0;
+    }
+    .bold{
+      font-weight: bold;
+      font-size: 3rem;
+      margin: 1rem 0;
+      color:   hsl(210, 10%, 33%);
+    }
+    .computer{
+    text-align: left;
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    margin: 15rem 0;
+    }
+    .computer article{
+      margin: 5rem;
+      position: relative;
+      right: -2rem;
+    }
+    .computer figure{
+      position: relative;
+      left: -2rem;
+    }
+    .devices{
+      text-align: center;
+    }
+    .workflow{
+      text-align: center;
+    }
+    .workflow section{
+      margin: 5rem 0 15rem 0;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      gap: 5rem;
+    }
+    .logos{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 0 0 15rem 0;
+    }
+    .clipboard{
+      text-align: center;
+      margin-bottom: 17rem;
+    }
+    footer .small{
+      height: 6rem;
+      width: 6rem;
+      overflow: hidden;
+    }
+    footer .small img{
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+    li{
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.8rem;
+      list-style: none;
+      color: hsl(201, 11%, 66%);
+    }
+    footer{
+      height: 15rem;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color: gainsboro ;
+    }
+    .social{
+      display: flex;
+      gap: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+ <header>
+  <figure>
+    <img src="images/logo.svg" alt="logo">
+  </figure>
+ <h1>A history of everything you copy</h1>
+<p>Clipboard allows you to track and organize everything you 
+  copy. Instantly <br> access your clipboard on all your devices.</p>
+
+ <div>
+  <button class="button" id="green">Download for iOS</button>
+  <button class="button" id="purple">Download for Mac</button>
+ </div>
+ </header>
+
+ <section class="keep-track">
+  <h2>Keep track of your snippets</h2>
+  <p>Clipboard instantly stores any item you copy in the cloud, 
+    meaning you can access <br> your snippets immediately on all your 
+    devices. Our Mac and iOS apps will help you <br> organize everything.</p>
+ </section>
+
+<section class="computer">
+  <figure>
+    <img src="images/image-computer.png" alt="computer">
+   </figure>
+  <section>
+    <article>
+      <p class="bold">Quick Search</p>
+      <p> Easily search your snippets by content, category, web address, application, and more.</p>
+    </article>
+    
+     <article>
+      <p class="bold">iCloud Sync</p>
+      <p> Instantly saves and syncs snippets across all your devices.</p>
+     </article>
+    
+     <article>
+      <p class="bold">Complete History</p>
+     <p> Retrieve any snippets from the first moment you started using the app.</p>
+     </article>
+  </section>
+</section>
+
+ <section class="devices">
+  <h2>Access Clipboard anywhere</h2>
+  <p>Whether you’re on the go, or at your computer, you can access all your Clipboard <br>
+   snippets in a few simple clicks.</p>
+   <figure>
+     <img src="images/image-devices.png" alt="Devices">
+   </figure>
+ </section>
+
+ <section class="workflow">
+  <h2>Supercharge your workflow</h2>
+  <p>We’ve got the tools to boost your productivity.</p>
+
+<section>
+  <article>
+    <figure>
+      <img src="images/icon-blacklist.svg" alt="blacklists">
+    </figure>
+    <p class="bold">Create blacklists</p>
+    <p>Ensure sensitive information never makes its <br>way to your clipboard by excluding certain <br> sources.</p>
+  </article>
+  
+   <article>
+    <figure>
+      <img src="images/icon-text.svg" alt="text">
+    </figure>
+    <p class="bold">Plain text snippets</p>
+    <p>Remove unwanted formatting from copied text <br> for a consistent look.</p>
+   </article>
+  
+   <article>
+    <figure>
+      <img src="images/icon-preview.svg" alt="">
+    </figure>
+    <p class="bold">Sneak preview</p>
+    <p>Quick preview of all snippets on your Clipboard <br> for easy access.</p>
+   </article>
+</section>
+ </section>
+
+<section class="logos">
+  <figure>
+    <img src="images/logo-google.png" alt="google">
+  </figure>
+  <figure>
+    <img src="images/logo-ibm.png" alt="ibm">
+  </figure>
+  <figure>
+    <img src="images/logo-microsoft.png" alt="microsoft">
+  </figure>
+  <figure>
+    <img src="images/logo-hp.png" alt="hp">
+  </figure>
+  <figure>
+    <img src="images/logo-vector-graphics.png" alt="vector graphics">
+  </figure>
+</section>
+  <section class="clipboard">
+    <h2>Clipboard for iOS and Mac OS</h2>
+ <p>Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
+  and <br>you’re ready to start adding to your clipboard.</p>
+  <button class="button" id="green">Download for iOS</button>
+  <button class="button" id="purple">Download for Mac</button>
+  </section>
+
+  <footer>
+    <figure class="small">
+      <img src="images/logo.svg" alt="logo">
+    </figure>
+   <ul>
+    <li> FAQs</li>
+    <li>Contact Us</li>
+   </ul>
+  <ul>
+    <li>Privacy Policy</li>
+    <li>Press Kit</li>
+  </ul>
+  <ul>
+    <li>Install Guide</li>
+  </ul>
+  <figure class="social"> 
+    <img src="images/icon-facebook.svg" alt="facebook">
+    <img src="images/icon-twitter.svg" alt="twitter">
+    <img src="images/icon-instagram.svg" alt="icon-instagram">
+  </figure>
+  </footer>
+  
+ 
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Zion-Faisy Akakpo</a>.
+    </p>
+
+</body>
+</html>
