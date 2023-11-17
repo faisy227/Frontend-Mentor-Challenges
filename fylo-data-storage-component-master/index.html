@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Alex+Brush&family=Allura&family=Amatic+SC&family=Antic+Didone&family=Bodoni+Moda:opsz@6..96&family=Bubbler+One&family=Caveat&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Dancing+Script&family=Great+Vibes&family=Indie+Flower&family=Macondo&family=Montserrat:wght@100;200&family=Nunito:wght@200&family=Oswald:wght@200&family=Playfair+Display:ital@1&family=Roboto:ital,wght@0,100;0,400;1,100&family=Sacramento&family=Space+Mono&family=Spectral:wght@200&family=Tangerine&family=Tulpen+One&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Fylo data storage component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  body{
+    height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-image: url(bg-desktop.png);
+    background-color:  hsl(229, 57%, 11%);
+  }
+  main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html{
+    font-size: 10px;
+  }
+  .icons{
+    height: 20rem;
+    width: 35rem;
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 1rem 10rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    padding: 4rem;
+  }
+  figure{
+    height: 4rem;
+    width: 4rem;
+    background-color:  hsl(229, 57%, 11%);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .icons article{
+    display: flex;
+    gap: 3rem;
+  }
+  .storage{
+    height: 15rem;
+    width: 65rem;
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 1rem ;
+    position: relative;
+    bottom: -20px;
+  }
+  p{
+    font-size: 1.4rem;
+    color:  hsl(229, 7%, 55%);
+    font-family: 'Bodoni Moda', serif;
+    padding: 2rem;
+  }
+  p span{
+    color: hsl(243, 100%, 93%);
+    text-align: left;
+  }
+  article p{
+    color: hsl(243, 100%, 93%);
+  }
+  h2{
+    font-family: 'Bodoni Moda', serif;
+    color: hsl(229, 7%, 55%);
+    font-size: 1.1rem;
+    padding: 2rem;
+	text-align: left;
+  line-height: 1.5em;
+  }
+  h2 span{
+    font-size: 2rem;
+    color: black;
+  }
+  .storage div{
+  display: inline-block;
+  position: relative;
+	width: 14rem;
+	height: auto;
+	background-color: white;
+  border-radius: 1rem 1rem 0 1rem;
+  position: absolute;
+  top: -20%;
+  left: 90%;
+  transform: translate(-90%, 0);
+  }
+  .tri-right.btm-right:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: 0px;
+	bottom: -20px;
+	border: 12px solid;
+	border-color: white white transparent transparent;
+}
+.storage article{
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.range{
+  width: 40rem;
+  height: 1.5rem;
+  position: absolute;
+  appearance: none;
+  left: 20%;
+  transform: translate(-20%);
+  outline: none;
+  border-radius: 1.5rem;
+  background: linear-gradient( to right,hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  overflow: hidden;
+}
+
+
+
+
+  
+  </style>
+</head>
+<body>
+<main>
+  <section class="icons"> 
+    <img src="logo.svg" alt="logo">
+    <article>
+      <figure>
+        <img src="icon-document.svg" alt="document">
+      </figure>
+     <figure>
+      <img src="icon-folder.svg" alt="folder">
+     </figure>
+     <figure>
+      <img src="icon-upload.svg" alt="upload">
+     </figure>
+    </article>
+    </section>
+     <section class="storage">
+      <p>You’ve used <span>815 GB</span> of your storage</p>
+
+      <div class="tri-right btm-right">
+       <h2><span>185 </span>GB LEFT</h2>
+      </div>
+
+    
+       <input type="range" name="range" id="range" class="range">
+     
+     
+     <article>
+       <p>0 GB</p> <p>1000 GB</p>
+     </article>
+     </section>
+</main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Zion-Faisy Akakpo</a>.
+  </div>
+</body>
+</html>
