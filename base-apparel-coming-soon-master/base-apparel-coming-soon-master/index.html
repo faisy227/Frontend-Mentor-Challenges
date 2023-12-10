@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html{
+      font-size: 10px;
+    }
+    h1{
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: lighter;
+      font-size: 6rem;
+      color:  hsl(0, 36%, 70%);
+      margin: 8rem 0  2rem 13rem;
+      letter-spacing: 0.5rem;
+    }
+    h1 b{
+      color:  hsl(0, 6%, 24%);
+    }
+    p{
+      font-size: 1.6rem;
+      font-family: 'Josefin Sans', sans-serif;
+      color:  hsl(0, 36%, 70%);
+      height: 5rem;
+      width: 35rem;
+      text-align: left;
+      margin: 0 0  2rem 13rem;
+    }
+    form{
+      height: 100vh;
+      display: flex;
+      background-image: linear-gradient(135deg,hsl(0, 0%, 100%),  hsl(0, 100%, 98%));
+    }
+    .hero{
+      height: 100vh;
+      width: 40%;
+      overflow: hidden;
+    }
+    .hero img{
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+    .container{
+      height: 100vh;
+      width: 60%;
+    }
+   
+    .logo{
+      margin: 5rem 13rem;
+    }
+    input[type='text']{
+      height: 4rem;
+      width: 35rem;
+      border-radius: 25rem;
+      margin: 0 0  2rem 13rem;
+      border: 2px solid;
+      border-color:  hsl(0, 36%, 70%);
+      outline: none;
+      font-size: 1.6rem;
+      font-family: 'Josefin Sans', sans-serif;
+      color:  hsl(0, 6%, 24%);
+      padding-left: 2rem;
+      font-weight: bolder;
+    }
+    button{
+      width: 7rem;
+      height: 4.5rem;
+      border-radius: 49%;
+      border: none;
+      background-image: linear-gradient(135deg, hsl(0, 80%, 86%),  hsl(0, 74%, 74%));
+      position: absolute;
+      top: 81%;
+      left: 60%;
+      transform: translate(-55%, -72%);
+      box-shadow: 0px 0.7rem 1rem 0.3rem  hsl(0, 80%, 86%);
+      z-index: 1;
+      outline: none;
+    }
+    .button{
+      filter:brightness(1.2);
+     opacity: 0.7;
+    }
+
+    .content{
+      position: relative;
+    }
+    input[type="text"]::placeholder{
+      font-size: 1.6rem;
+      font-family: 'Josefin Sans', sans-serif;
+      color:  hsl(0, 36%, 70%);
+      font-weight: lighter;
+    }
+    .error{
+      color: hsl(0, 93%, 68%);
+      margin-top: -1rem;
+      padding: 0 0 1rem;
+      visibility:hidden;
+    }
+    footer{
+      width: 100vw;
+      text-align: center;
+      height: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    
+   <section class="container">
+    <figure class="logo">
+      <img src="images/logo.svg" alt="logo">
+    </figure>
+        <section class="content">
+          <h1>WE'RE <br><b>COMING <br> SOON</b></h1>
+         <p>Hello fellow shoppers! We're currently building our new fashion store. 
+         Add your email below to stay up-to-date with announcements and our launch deals.</p>
+         <input type="text" name="email" id="email" placeholder="Email Address" required>
+        <button type="submit" ><img src="images/icon-arrow.svg" alt="arrow"></button>
+        <p class="error">Please provide a valid email</p>
+        </section>
+   </section>
+
+    <figure class="hero">
+    <img src="images/hero-desktop.jpg" alt="hero">
+    </figure>
+  </form>
+  <script>
+    const submitButton = document.querySelector('button');
+    const emailField = document.querySelector('#email');
+    const message = document.querySelector('.error');
+  
+    submitButton.addEventListener('click', (event) => {
+  
+      submitButton.classList.toggle('button');
+      if (!emailField.value.includes('@')) {
+        emailField.style.borderColor = "hsl(0, 93%, 68%)"; 
+        message.style.visibility = "visible";
+        event.preventDefault(); // Prevent the default form submission
+      }
+    });
+  </script>
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Zion-Faith</a>.
+    </p>
+  </footer>
+</body>
+</html>
