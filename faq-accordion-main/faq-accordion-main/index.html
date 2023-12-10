@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | FAQ accordion</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    @font-face {
+      font-family: 'WorkSans' ;
+      src: url(assets/fonts/WorkSans-VariableFont_wght.ttf);
+    }
+    body{
+      background: url(assets/images/background-pattern-desktop.svg);
+      background-position: top;
+      background-repeat: no-repeat;
+    }
+    main{
+      height: 120vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html{
+      font-size: 10px;
+    }
+    .accordion{
+      height: auto;
+      width: 47rem;
+      background-color: white;
+      border-radius: 1rem;
+      box-shadow: 0px 0.5rem 1.5rem 0px hsl(293, 32%, 78%);
+    }
+    h1{
+      font-family: 'WorkSans' ;
+      font-size: 3rem;
+      margin: 2rem 0rem;
+    }
+    div{
+      display: flex;
+    }
+    div figure{
+      margin: 2rem 1rem;
+      height: 3rem;
+      width: 3rem;
+      overflow: hidden;
+    }
+    div figure img{
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+    article{
+      font-family: 'WorkSans' ;
+    }
+    .content-container{
+      padding: 1rem;
+    }
+    .question{
+      font-weight: bold;
+      font-size: 1.5rem;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      color: hsl(292, 42%, 14%);
+    }
+    .image, .question{
+      cursor: pointer;
+    }
+   .question:hover{
+   color: orchid;
+   }
+    .answer{
+      height: 0;
+      width: 100%;
+      font-size: 1.6rem;
+      overflow: hidden;
+      transition: 500ms ease-in-out;
+      color: hsl(292, 16%, 49%);
+    }
+    .content-container.active .answer{
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+
+ <main>
+  <article class="accordion">
+   <div>
+    <figure>
+      <img src="assets/images/icon-star.svg" alt="star">
+    </figure>
+    <h1>FAQs</h1>
+   </div>
+    <section class="content-container">
+      <article class="question">
+        What is Frontend Mentor, and how will it help me?
+        <figure>
+          <img src="assets/images/icon-plus.svg" alt="plus" class="image">
+        </figure>
+      </article>
+    
+      <article class="answer">
+        Frontend Mentor offers realistic coding challenges to help developers improve their 
+      frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for 
+      all levels and ideal for portfolio building.
+      </article>
+    
+    </section>
+    <section class="content-container">
+      <article class="question">
+        Is Frontend Mentor free?
+        <figure>
+          <img src="assets/images/icon-plus.svg" alt="plus" class="image">
+        </figure>
+      </article>
+    
+     <article class="answer">
+      Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
+      option providing access to a range of projects suitable for all skill levels.
+     </article>
+    </section>
+  
+    <section class="content-container">
+      <article class="question">
+        Can I use Frontend Mentor projects in my portfolio?
+        <figure>
+          <img src="assets/images/icon-plus.svg" alt="plus" class="image">
+        </figure>
+      </article>
+    
+     <article class="answer">
+      Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
+      way to showcase your skills to potential employers!
+     </article>
+    </section>
+  
+    <section class="content-container">
+      <article class="question">
+        How can I get help if I'm stuck on a challenge?
+        <figure>
+          <img src="assets/images/icon-plus.svg" alt="plus" class="image">
+        </figure>
+      </article>
+      
+      <article class="answer">
+        The best place to get help is inside Frontend Mentor's Discord community. There's a help 
+      channel where you can ask questions and seek support from other community members.
+      </article>
+    </section>
+    
+   </article>
+
+   <script>
+    const images = document.querySelectorAll('.image');
+    const contentContainers = document.querySelectorAll('.content-container');
+  
+    for (let i = 0; i < images.length; i++) {
+      images[i].addEventListener('click', function() {
+        // they both toggle active, the images so that we know to change the sign
+        this.classList.toggle('active');
+        // The class list so the answer can display
+        contentContainers[i].classList.toggle('active');
+  
+        // Change image source based on the current class state
+        const newImageSrc = this.classList.contains('active')
+          ? "assets/images/icon-minus.svg"
+          : "assets/images/icon-plus.svg";
+  
+        this.setAttribute('src', newImageSrc);
+      });
+    }
+  </script>
+  
+ </main>
+ 
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Zion-Faith Akakpo</a>.
+  </div>
+</body>
+</html>
