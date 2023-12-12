@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Ephesis&family=Herr+Von+Muellerhoff&family=Josefin+Sans:wght@100&family=Monsieur+La+Doulaise&family=Mrs+Saint+Delafield&family=Pinyon+Script&family=Poppins:wght@100&family=WindSong&family=Zeyada&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html{
+      font-size: 10px;
+    }
+    body{
+      background-image: url(images/bg-intro-desktop.png);
+      background-repeat: no-repeat;
+      background-color: hsl(0, 100%, 74%) ;
+    }
+    main{
+      display: flex;
+    }
+    .main-content{
+      height: 100vh;
+      width: 50vw;
+
+      /* position: absolute;
+      top: 50%;
+      left: 20%;
+      transform: translate(-20%, -50%); */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;  
+     margin: 0 7rem;
+    }
+    h1{
+      font-size: 5rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bolder;
+      color: white;
+      
+    }
+    .main-content p{
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      font-weight: bold;
+      font-size: 1.6rem;
+    }
+    form{
+      height: 100vh;
+      width: 50vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;  
+      align-items: center;
+
+
+    }
+   .textbox-content{
+    height: 42rem;
+    width: 48rem;
+    background-color: white;
+   padding: 3rem 2rem;
+   border-radius: 1rem;
+   margin: 0 7rem;
+   }
+   input[type="text"]{
+    height: 5rem;
+    width: 45rem;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-weight: bolder;
+    border:2px solid hsl(246, 25%, 77%);
+    margin: 0.4rem 0;
+    border-radius: 1rem;
+    padding: 2rem;
+   }
+   input[type="text"]:focus{
+    border:2px solid black;
+   }
+   button{
+    height: 5rem;
+    width: 45rem;
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 1rem;
+    outline: none;
+   }
+   .textbox-content p{
+    margin: 1rem 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+   }
+   .red{
+    color: hsl(0, 100%, 74%) ;
+    font-weight: bolder;
+   }
+   .text{
+    height: 5rem;
+    width: 46rem;
+    background-color: hsl(248, 32%, 49%);
+    color: hsl(246, 25%, 77%);
+    padding: 1.5rem 0;
+    border-radius: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    color: hsl(246, 25%, 77%);
+    font-weight: bolder;
+   }
+   .white{
+    color: white;
+   }
+   span{
+    color: hsl(0, 100%, 74%);
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+  position: relative;
+  left: 70%;
+  visibility: hidden;
+   }
+   div{
+    position: relative;
+   }
+   .image{
+    position: absolute;
+    left: 90%;
+    top: 30%;
+    visibility: hidden;
+   }
+   
+  </style>
+</head>
+<body>
+  <main>
+    <article class="main-content">
+      <h1>Learn to code by watching others</h1>
+    <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+      but understanding how developers think is invaluable. </p>
+    </article>
+  
+   <form>
+    <p class="text"><b class="white">Try it free 7 days</b> then $20/mo. thereafter</p>
+    <section class="textbox-content">
+      <div>
+        <img src="images/icon-error.svg" alt="error" class="image">
+        <input type="text" placeholder="First Name" name="first-name">
+      </div>
+      <span><i>First Name cannot be empty</i></span><br>
+
+  <div>
+    <img src="images/icon-error.svg" alt="error" class="image">
+    <input type="text" placeholder=" Last Name" name="last-name">
+  </div>
+   <span><i>Last Name cannot be empty</i></span><br>
+
+    <div>
+      <img src="images/icon-error.svg" alt="error" class="image">
+      <input type="text" placeholder="Email Address" name="email-address">
+    </div>
+    <span><i>Looks like this is not an email</i></span><br>
+
+   <div>
+    <img src="images/icon-error.svg" alt="error" class="image">
+    <input type="text" placeholder=" Password" name="password">
+   </div>
+   <span><i>Password cannot be empty</i></span><br>
+
+    <button>Claim your free trial</button> 
+    <p>By clicking the button, you are agreeing to our <b class="red">Terms and Services</b></p>
+    </section>
+   </form>
+
+   <script>
+    const firstNameTextbox = document.querySelector('input[name="first-name"]');
+    const lastNameTextbox = document.querySelector('input[name="last-name"]');
+    const emailTextbox = document.querySelector('input[name="email-address"]');
+    const passwordTextbox = document.querySelector('input[name="password"]');
+  
+    const firstNameMessage = document.querySelector('span:nth-of-type(1)');
+    const lastNameMessage = document.querySelector('span:nth-of-type(2)');
+    const emailMessage = document.querySelector('span:nth-of-type(3)');
+    const passwordMessage = document.querySelector('span:nth-of-type(4)');
+  
+    const firstNameError = document.querySelector('.image:nth-of-type(1)');
+    const lastNameError = document.querySelector('.image:nth-of-type(2)');
+    const emailError = document.querySelector('.image:nth-of-type(3)');
+    const passwordError = document.querySelector('.image:nth-of-type(4)');
+  
+    const button = document.querySelector('button');
+  
+    button.addEventListener('click', function (event) {
+      if (!emailTextbox.value.includes('@') || emailTextbox.value.trim() === "" || emailTextbox.value.includes('/')) {
+        emailMessage.style.visibility = "visible";
+        emailError.style.visibility = "visible";
+        event.preventDefault();
+      }
+      else if(firstNameTextbox.value.trim() === ""){
+        firstNameMessage.style.visibility = "visible";
+        firstNameError.style.visibility = "visible";
+        event.preventDefault();
+      }
+      else if(lastNameTextbox.value.trim() === ""){
+        lastNameMessage.style.visibility = "visible";
+        lastNameError.style.visibility = "visible";
+        event.preventDefault();
+      }
+     else if(passwordTextbox.value.trim() === ""){
+        passwordMessage.style.visibility = "visible";
+        passwordError.style.visibility = "visible";
+        event.preventDefault();
+      }
+  
+      
+    });
+  </script>
+  
+  
+  
+  </main>
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Zion-Faith Akakpo</a>.
+    </p>
+  </footer>
+</body>
+</html>
