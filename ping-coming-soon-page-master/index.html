@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Ephesis&family=Herr+Von+Muellerhoff&family=Josefin+Sans:wght@100&family=Libre+Franklin:wght@100&family=Monsieur+La+Doulaise&family=Mrs+Saint+Delafield&family=Pinyon+Script&family=Poppins:wght@100&family=WindSong&family=Zeyada&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Ping coming soon page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html{
+      font-size: 10px;
+    }
+    main{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h1{
+      font-family: 'Libre Franklin', sans-serif;
+      font-weight: 300;
+      font-size: 3.5rem;
+      color: hsl(0, 0%, 59%);
+    }
+    header{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .logo{
+      margin: 4rem 0 2rem 0;
+    }
+    p{
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 2rem;
+      font-weight: 900;
+      margin: 1rem 0 0 0;
+     
+    }
+    b{
+      color: hsl(209, 33%, 12%);
+      font-weight: 900;
+    }
+    input[type="text"]{
+      width: 30rem;
+      height: 3.5rem;
+      border-radius: 3rem;
+      color: black;
+      font-size: 1.3rem;
+      font-weight: 900;
+      padding: 0 3rem;
+      border: 1px solid hsl(0, 0%, 59%);
+      font-family: 'Libre Franklin', sans-serif;
+    }
+    button{
+      width: 13rem;
+      height: 3.5rem;
+      border-radius: 3rem;
+      border: none;
+      background-color: hsl(223, 87%, 63%);
+      color: white;
+      font-size: 1.3rem;
+      box-shadow: -2px 5px 10px 0  hsla(223, 87%, 63%, 0.637);
+    }
+    form{
+      font-family: 'Libre Franklin', sans-serif;
+      margin: 3rem 0 3rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    figure{
+      /* height: 55rem;
+      width: 90rem;
+      overflow: hidden; */
+      /* height: 45rem;
+      width: 70rem;
+      overflow: hidden; */
+      height: 30rem;
+      width: 50rem;
+      overflow: hidden;
+    }
+    figure img{
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+    .copy{
+      font-family: 'Libre Franklin', sans-serif;
+      font-weight: 300;
+      font-size: 1.6rem;
+      color: hsl(0, 0%, 59%);
+    }
+  
+    i{
+      color: hsl(354, 100%, 66%);
+      font-family: 'Libre Franklin', sans-serif;
+      display: none;
+      
+    }
+  </style>
+</head>
+<body>
+
+ <main>
+  <header>
+    <img src="images/logo.svg" alt="logo" class="logo">
+    <h1>We are launching <b>soon!</b></h1>
+   <p>Subscribe and get notified</p>
+   </header>
+    <form>
+      <div>
+        <input type="text" name="email-textbox" id="email-textbox" placeholder="Your email address" ><br><br>
+      <label for="email-textbox" id="label"><i>Please provide a valid email address</i></label>
+      </div>
+    <button type="submit"  class="button">Notify Me</button>
+    </form>
+  
+    <figure>
+      <img src="images/illustration-dashboard.png" alt="dashboard">
+    </figure>
+  
+   <p class="copy"> &copy; Copyright Ping. All rights reserved.</p>
+
+
+   <script>
+    const textbox = document.querySelector('#email-textbox');
+    const label = document.querySelector("i");
+    const button = document.querySelector('.button');
+
+    button.addEventListener("click", function (){
+      if(!textbox.value.includes('@') || textbox.value === "" || textbox.value.includes("/")){
+        label.style.display = "inline";
+        textbox.style.borderColor = "hsl(354, 100%, 66%)";
+        textbox.style.color = "hsl(354, 100%, 66%)";
+        event.preventDefault();
+      } else {
+        label.style.display = "none";
+      }
+    });
+</script>
+
+ </main>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Zion-Faith Akakpo</a>.
+    </p>
+  </footer>
+</body>
+</html>
