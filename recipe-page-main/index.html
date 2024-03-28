@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Recipe page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    :root{
+      /* Primary Colors */
+      --nutmeg : hsl(14, 45%, 36%);
+      --dark-raspberry: hsl(332, 51%, 32%);
+
+      /* Neutral Colors */
+      --white: hsl(0, 0%, 100%);
+      --rose-white: hsl(330, 100%, 98%);
+      --eggshell: hsl(30, 54%, 90%);
+      --light-grey: hsl(30, 18%, 87%);
+      --wenge-brown: hsl(30, 10%, 34%);
+      --dark-charcoal: hsl(24, 5%, 18%);
+    }
+    html{
+      font-size: 10px;
+    }
+    @font-face {
+      font-family: 'Outfit';
+      src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+    }
+    @font-face {
+      font-family: 'Young';
+      src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf);
+    }
+    body{
+      background-color: var(--eggshell);
+      display: grid;
+      height: 100%;
+      justify-items: center;
+      width: 100vw;
+    }
+    h2{
+      font-size: 3rem;
+      color: var(--nutmeg);
+      font-family: 'Young';
+      font-weight: lighter;
+    }
+    section{
+      padding: 4%;
+    }
+    .wrapper{
+      width: 69%;
+      background-color: var(--white);
+      border-radius: 2rem;
+      padding: 5rem;
+    }
+    .wrapper .hero-image{
+      height: 40rem ;
+      width: 100%;
+      border-radius: 2rem;
+      overflow: hidden;
+    }
+    .wrapper .hero-image img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    .wrapper header{
+      height: auto;
+      margin-bottom: 2rem;
+    }
+    .wrapper header h1{
+      font-family: 'Young';
+      font-size: 5rem;
+      font-weight: lighter;
+      margin: 2rem 0;
+    }
+    .wrapper header p{
+      font-size: 1.6rem;
+      font-family: 'Outfit';
+      color: var(--dark-charcoal);
+    }
+    .prep-time{
+      background-color: hsla(332, 51%, 32%, 0.075);
+      font-size: 1.6rem;
+      
+      border-radius: 2rem;
+    }
+    .prep-time h3{
+      font-size: 2rem;
+      font-family: 'Young';
+      font-weight: lighter;
+      color: var(--dark-raspberry);
+    }
+     ul{
+      padding: 0 7%;
+      color: var(--dark-charcoal); 
+    }
+    li{
+      font-weight: lighter;
+      font-family: 'Young';
+      padding-left: 2rem;
+      font-size: 1.6rem;
+      line-height: 40px;
+    }
+    .ingredients,
+   .directions{
+      border-bottom: 2px solid;
+      border-color: var(--light-grey);
+    }
+    .values{
+      font-size: 1.6rem;
+    }
+    .values p{
+      margin: 1.6rem 0;
+    }
+    table{
+      width: 90%;
+      border-collapse: collapse;
+
+    }
+    tr{
+      border: none;
+      margin-bottom: 5px;
+    }
+
+     td {
+      border-bottom: 1px solid var(--light-grey);
+      font-family: 'Outfit';
+      font-size: 1.6rem;
+      padding: 20px;
+    }
+    td.nut{
+      color: var(--nutmeg);
+      font-weight: bold;
+    }
+    
+
+  </style>
+</head>
+<body>
+ <section class="wrapper">
+        <header>
+          <figure class="hero-image">
+              <img src="assets/images/image-omelette.jpeg" alt="omelette">
+          </figure>
+            <h1>Simple Omelette Recipe</h1>
+          <p>
+            An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked 
+            to perfection, optionally filled with your choice of cheese, vegetables, or meats.
+          </p>
+      </header>
+        <main>
+          <section class="prep-time">
+            <h3>Preparation time</h3>
+          
+            <ul>
+                <li><strong>Total</strong>: Approximately 10 minutes</li>
+                <li><strong>Preparation</strong>: 5 minutes</li>
+                <li><strong>Cooking</strong>: 5 minutes</li>
+            </ul>
+            </section>
+          
+            <section class="ingredients">
+              <h2>Ingredients</h2>
+                  <ul>
+                      <li>2-3 large eggs</li>
+                      <li>Salt, to taste</li>
+                      <li>Pepper, to taste</li>
+                      <li>1 tablespoon of butter or oil</li>
+                      <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+                  </ul>
+            </section>
+          
+            <section class="directions">
+              <h2>Instructions</h2>
+                <ol>
+                    <li>
+                    <strong>Beat the eggs:</strong> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
+                      You can add a tablespoon of water or milk for a fluffier texture.
+                    </li>
+                    <li>
+                      <strong>Heat the pan:</strong> Place a non-stick frying pan over medium heat and add butter or oil.
+                    </li>
+                    <li>
+                    <strong>Cook the omelette:</strong> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
+                    the eggs evenly coat the surface.
+                    </li>
+                    <li>
+                    <strong> Add fillings (optional):</strong> When the eggs begin to set at the edges but are still slightly runny in the 
+                    middle, sprinkle your chosen fillings over one half of the omelette.
+                    </li>
+                    <li>
+                    <strong>Fold and serve:</strong> As the omelette continues to cook, carefully lift one edge and fold it over the 
+                    fillings. Let it cook for another minute, then slide it onto a plate.
+                    </li>
+                    <li>
+                  <strong>Enjoy:</strong> Serve hot, with additional salt and pepper if needed.
+                    </li>
+                </ol>
+            </section>
+          
+            <section class="values">
+            <h2>Nutrition</h2>
+          
+          <p>The table below shows nutritional values per serving without the additional fillings.</p>
+          
+          <table>
+            <tr>
+              <td>Calories</td>
+              <td class="nut">277kcal</td>
+            </tr>
+          
+          <tr>
+            <td>Carbs</td>
+            <td class="nut">0g</td>
+          </tr>
+          
+            <tr>
+              <td>Protein</td>
+              <td class="nut">20g</td>
+            </tr>
+          
+            <tr>
+            <td>Fat</td>
+            <td class="nut">22g</td>
+            </tr>
+          </table>
+        </section>
+
+      </main>
+</section>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Zion-Faith Akakpo</a>.
+  </footer>
+</body>
+</html>
