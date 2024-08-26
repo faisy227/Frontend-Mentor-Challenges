@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | News homepage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <a href="#" class="header__logo">
+      <img src="assets/images/logo.svg" alt="" class="header__img">
+    </a>
+    <button class="header__open">
+      <img src="assets/images/icon-menu.svg" alt="">
+    </button>
+    
+    <nav class="header__nav">
+      <button class="header__close">
+        <img src="assets/images/icon-menu-close.svg" alt="">
+      </button>
+     <ul class="header__list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Popular</a></li>
+        <li><a href="#">Trending</a></li>
+        <li><a href="#">Categories</a></li>
+     </ul>
+    </nav>
+  </header>
+
+ <main>
+
+  <figure class="hero">
+    <img src="assets/images/image-web-3-mobile.jpg" alt="" class="hero__mobile">
+    <img src="assets/images/image-web-3-desktop.jpg" alt="" class="hero__desktop">
+  </figure>
+
+  <article class="cta">
+    <h1 class="cta__title">The Bright Future of Web 3.0?</h1>
+    <div class="cta__content">
+      <p class="cta__desc">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+        But is it really fulfilling its promise?</p>
+      <button class="cta__btn">Read more</button>
+    </div>
+  </article>
+
+  <section class="news">
+    <h2 class="news__title">New</h2> 
+
+    <ul class="news__list">
+      <li>
+        <h2>Hydrogen VS Electric Cars</h2>
+        <p> Will hydrogen-fueled cars ever catch up to EVs?</p>
+      </li>
+      <li>
+        <h2>The Downsides of AI Artistry</h2>
+        <p>What are the possible adverse effects of on-demand AI image generation?</p>
+      </li>
+      <li>
+        <h2>Is VC Funding Drying Up?</h2>
+        <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+      </li>
+    </ul>
+  </section>
+
+ <aside class="blog">
+  <ul class="blog__list">
+    <li>
+      <figure class="blog__img"><img src="assets/images/image-retro-pcs.jpg" alt=""></figure>
+      <div class="content">
+        <h2>01</h2>
+        <h4>Reviving Retro PCs</h4>
+        <p>What happens when old PCs are given modern upgrades?</p></div>
+    </li>
+    <li>
+      <figure class="blog__img"><img src="assets/images/image-top-laptops.jpg" alt=""></figure>
+      <div class="content">
+        <h2>02</h2>
+        <h4>Top 10 Laptops of 2022</h4>
+        <p>Our best picks for various needs and budgets.</p></div>
+    </li>
+    <li>
+      <figure class="blog__img"><img src="assets/images/image-gaming-growth.jpg" alt=""></figure>
+     <div class="content">
+      <h2>03</h2>
+      <h4>The Growth of Gaming</h4>
+      <p>How the pandemic has sparked fresh opportunities.</p>
+     </div>
+    </li>
+  </ul>
+ </aside>
+ </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Zion-Faith Akakpo</a>.
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body> 
+</html>

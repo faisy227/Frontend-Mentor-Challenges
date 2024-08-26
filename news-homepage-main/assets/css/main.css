@@ -1,0 +1,242 @@
+/* ############	Reset ############ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ############	Custom Variables ############ */
+:root {
+  /* ############	Colors ############ */
+  --Soft-orange: hsl(35, 77%, 62%);
+  --Soft-red: hsl(5, 85%, 63%);
+  --Off-white: hsl(36, 100%, 99%);
+  --Grayish-blue: hsl(233, 8%, 79%);
+  --Dark-grayish-blue: hsl(236, 13%, 42%);
+  --Very-dark-blue: hsl(240, 100%, 5%);
+  /* ############	Fonts ############ */
+  --inter: "Inter", sans-serif;
+}
+
+/* ############	General Styles ############ */
+button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--Very-dark-blue);
+}
+
+/* ############	Header ############ */
+.header {
+  position: relative;
+  padding: 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  height: 100vh;
+  background-color: white;
+  max-width: 350px;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  transition: 500ms;
+}
+.header__nav.active {
+  transform: translateX(-350px);
+}
+.header__nav button {
+  align-self: flex-end;
+}
+.header__nav button img {
+  width: 40px;
+}
+.header__list {
+  font-family: var(--inter);
+  display: grid;
+  gap: 1.7em;
+  font-size: 20px;
+  align-self: flex-start;
+  justify-self: start;
+  margin-top: 50px;
+}
+
+main {
+  padding: 5%;
+}
+main .hero img {
+  width: 100%;
+}
+main .hero__desktop {
+  display: none;
+}
+main .cta {
+  font-family: var(--inter);
+}
+main .cta__title {
+  font-weight: 700;
+  font-size: 50px;
+  width: 90%;
+}
+main .cta__desc {
+  margin: 15px 0;
+  color: var(--Dark-grayish-blue);
+}
+main .cta__btn {
+  background: var(--Soft-red);
+  font-family: var(--inter);
+  width: 50%;
+  padding: 13px 0;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 700;
+  font-size: 14px;
+}
+main .news {
+  margin: 60px 0;
+  background: var(--Very-dark-blue);
+  color: white;
+  font-family: var(--inter);
+  padding: 5%;
+}
+main .news__title {
+  color: var(--Soft-orange);
+  font-size: 30px;
+}
+main .news__list li {
+  border-bottom: 1px solid var(--Grayish-blue);
+}
+main .news__list li h2 {
+  color: var(--Off-white);
+  margin-top: 25px;
+}
+main .news__list li p {
+  color: var(--Grayish-blue);
+  margin: 15px 0 35px;
+}
+main .news__list li:nth-child(3) {
+  border-bottom: none;
+}
+main .blog__list {
+  color: var(--Very-dark-blue);
+  font-family: var(--inter);
+  display: grid;
+  gap: 2em;
+}
+main .blog__list li {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  gap: 2%;
+}
+main .blog__list li .content {
+  width: 100%;
+  text-align: left;
+}
+main .blog__list li .content h2 {
+  color: var(--Soft-orange);
+  font-size: 33px;
+}
+main .blog__list li .content h4 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+main .blog__list li .content p {
+  font-size: 14px;
+  color: var(--Dark-grayish-blue);
+}
+main .blog__img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 1000px) {
+  .header {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: end;
+    justify-items: end;
+  }
+  .header button {
+    display: none;
+  }
+  .header__nav {
+    all: unset;
+  }
+  .header__list {
+    display: flex;
+  }
+  .header__list li a {
+    color: var(--Dark-grayish-blue);
+    font-size: 15px;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "hero hero news" "web web news" "card card card";
+    gap: 1em;
+  }
+  main .hero {
+    grid-area: hero;
+  }
+  main .hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  main .hero__desktop {
+    display: block;
+  }
+  main .hero__mobile {
+    display: none;
+  }
+  main .cta {
+    grid-area: web;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-self: center;
+  }
+  main .cta__title {
+    font-size: 50px;
+  }
+  main .cta__content {
+    font-size: 18px;
+  }
+  main .cta__btn {
+    width: 50%;
+    padding: 15px 0;
+  }
+  main .news {
+    grid-area: news;
+    margin: 0;
+  }
+  main .blog {
+    grid-area: card;
+  }
+  main .blog__list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  main .blog__list .li .content {
+    width: 50%;
+  }
+}/*# sourceMappingURL=main.css.map */
